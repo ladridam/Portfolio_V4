@@ -1,8 +1,10 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
 }
 
+/*CUSTOMISING NAV*/
 .nav-custom {
     background: #222;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -31,6 +33,7 @@ body, html {
     font-weight: bold;
 }
 
+/*SEARCH CONTAINER*/
 .search-container {
     position: absolute;
     right: 20px;
@@ -44,6 +47,7 @@ body, html {
     border: none;
 }
 
+/*SEARCH CONTAINER BUTTON*/
 .search-container button {
     padding: 8px 12px;
     background: #0072ff;
@@ -57,6 +61,7 @@ body, html {
     background: #00c6ff;
 }
 
+/*INTRO SECTION*/
 .intro-section {
     background: url('../Assets/5.1.jpg') no-repeat center center/cover;
     padding: 100px 20px;
@@ -66,40 +71,59 @@ body, html {
     justify-content: center;
 }
 
+/*CONTENT CONTAINER*/
 .content-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     padding: 40px;
     max-width: 1000px;
     width: 100%;
     color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
+/*AVATAR*/
 .avatar-box {
     flex: 1 1 250px;
     text-align: center;
 }
 
+/*AVATAR DROP*/
 .avatar-drop {
-    margin-top: 10rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
 }
 
-/*.avatar-drop a {
+.avatar-drop .tab {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
     text-decoration: none;
-    padding-top: 0;
-}*/
+    transition: all 0.3s ease;
+}
 
+.avatar-drop .tab:hover {
+    background: rgba(0, 198, 255, 0.3);
+}
+
+
+/*AVATAR (PIC)
 .avatar {
-    width: 220px;
-    height: 220px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid white;
 }
-
+*/
+/*TEXT CONTENT*/
 .text-box {
     flex: 2 1 400px;
     padding: 20px;
@@ -115,10 +139,91 @@ body, html {
     line-height: 1.6;
 }
 
+/*CONTENT SECTION*/
+.content-section {
+    display: none;
+}
+
+/*INTRO BY DEFAULT*/
+#introduction {
+    display: block;
+}
+
+/*HIDE INTRO WHEN NOT TARGETTED*/
+:target~#introduction,
+.content-section:target {
+    display: block;
+}
+
+/*NON TARGETTED SECTIONS IS KEPT HIDDEN*/
+.content-section:not(:target) {
+    display: none;
+}
+
+.content-section:target {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.avatar-drop .tab:active,
+.content-section:target~.text-box .avatar-drop .tab[href="#"] {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*SKILL ITEMS*/
+.skill-item {
+    margin: 15px 0;
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border-radius: 4px;
+}
+
+/*PROJECT CARD*/
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: rgba(0, 198, 255, 0.2);
+    color: #00c6ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+/*RESPONSIVENESS*/
 @media (max-width: 768px) {
     .intro-section {
         background-size: cover;
     }
+
     .content-container {
         flex-direction: column;
         text-align: left;
@@ -157,6 +262,7 @@ body, html {
     }
 }
 
+/*FOOTER*/
 .footer {
     background: rgba(0, 0, 0, 0.6);
     color: #eee;

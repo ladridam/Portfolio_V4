@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Welcome</title>
-        <meta name="author" content="Ridam Rabi Das">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="CSS/homeStyle.css">
-    </head>
-    <body>
+
+<head>
+    <title>Welcome</title>
+    <meta name="author" content="Ridam Rabi Das">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/homeStyle.css">
+</head>
+
+<body>
     <header>
         <nav class="w3-bar nav-custom">
             <a class="w3-bar-item w3-button nav-link" href="index.html">Home</a>
@@ -24,24 +26,109 @@
     <section class="intro-section">
         <div class="content-container">
             <div class="avatar-box">
-                <img src="Assets/Avatar.png" alt="Ridam Avatar" class="avatar">
+                <img class="w3-border-white w3-animate-zoom" src="Assets/Avatar.png" alt="Ridam Avatar" class="avatar">
                 <div class="avatar-drop">
-                    <ul class="w3-ul w3-leftbar w3-card-4 w3-hoverable">
-                        <li class="w3-hover-light-gray"><a href="#">Home</a></li>
-                    </ul>
+                    <a href="#introduction" class="tab">Introduction</a>
+                    <a href="#skills" class="tab">Skills</a>
+                    <a href="#projects" class="tab">Projects</a>
+                    <a href="#education" class="tab">Education</a>
                 </div>
             </div>
             <div class="text-box">
                 <h1>Ridam Rabi Das</h1>
                 <h3>Inspiria Knowledge Campus, Siliguri</h3>
-                <p>
-                    Hello! My name is Ridam, and I am a passionate learner, explorer, and creator. I believe that life is a continuous journey of growth, and I am always eager to embrace new challenges, gain new skills, and improve myself in every possible way. <br> My Journey: I have always been curious about the world around me, whether it’s through reading, analyzing, or creating. My interests span across multiple domains—technology, literature, philosophy, and design. As a first-year college student, I am currently diving into various academic subjects that help shape my understanding of different fields. <br> My academic journey has introduced me to computer science, mathematics, and creative writing, among many other disciplines. I find joy in exploring concepts related to logic, problem-solving, and human expression. Recently, I have started learning web design, and this very profile page is one of my first projects! <br> What Drives Me? I am driven by a deep desire to express, innovate, and connect. Whether it’s through words, coding, or creative projects, I enjoy putting my thoughts into something tangible. I have a poetic and philosophical outlook on life, often reflecting on human emotions, societal structures, and personal growth. <br> I also enjoy engaging in deep discussions and exchanging ideas with others. I believe that thought-provoking conversations can lead to new perspectives and personal growth. Whether it’s debating abstract concepts, analyzing a book or film, or discussing real-world challenges, I find excitement in intellectual exploration.
-                </p>
+                <div id="introduction" class="content-section">
+                    <h4>Hello, I'm Ridam! 👋</h4>
+                    <p>
+                        A passionate <strong>Computer Science student</strong> at Inspiria Knowledge Campus with a knack
+                        for turning ideas into functional, elegant solutions. I thrive at the intersection of logic and
+                        creativity—whether it's building responsive websites, solving algorithmic challenges, or
+                        collaborating on team projects.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring UI design principles, contributing to Wellness Club, learning to lead people with management skills, or mentoring peers in programming fundamentals.
+                    </p>
+                </div>
+                <div id="skills" class="content-section">
+                    <h4>My Toolkit 🛠️</h4>
+
+                    <div class="skill-item">
+                        <span>HTML/CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 25%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>C</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>UI/UX Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <p><em>Currently learning: Python, JS</em></p>
+                </div>
+                <div id="projects" class="content-section">
+                    <h4>What I've Built 🚀</h4>
+
+                    <div class="project-card">
+                        <h5>Portfolio Website (This Project!)</h5>
+                        <p>A responsive portfolio with interactive sections built from scratch using HTML/CSS.
+                            Implemented a no-JS tab system for content switching.</p>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">W3.CSS</span>
+                    </div>
+                    <!--
+                    <div class="project-card">
+                        <h5>Academic Management System</h5>
+                        <p>A Python-based console app for student grade tracking, featuring file I/O operations and data
+                            visualization (Matplotlib).</p>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    -->
+                </div>
+                <div id="education" class="content-section">
+                    <h4>My Learning Journey 🎓</h4>
+
+                    <div class="education-item">
+                        <h5>Inspiria Knowledge Campus, Siliguri</h5>
+                        <p><strong>Bachelor of Computer Applications</strong> | 2024 - Present</p>
+                        <ul>
+                            <li>Core Subjects: Programming and Solving in C, Data Structures, Web Development, DBMS, Blockchain Technology</li>
+                            <li>Current SGPA: 8.41/10 (1st sem)</li>
+                        </ul>
+                    </div>
+
+                    <div class="education-item">
+                        <h5>Udemy / Coursera / NPTEL / Great Learning</h5>
+                        <p><strong>Web Development Bootcamp</strong> | 2023</p>
+                        <ul>
+                            <li>Certified in HTML/CSS and JavaScript fundamentals</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <footer class="footer">
         <p>footer</p>
     </footer>
-    </body>
+</body>
+
 </html>
