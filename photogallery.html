@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Photo Gallery</title>
+    <meta name="author" content="Ridam Rabi Das">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/galleryStyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="w3-bar nav-custom">
+            <a class="w3-bar-item w3-button nav-link" href="index.html">Home</a>
+            <!--a class="w3-bar-item w3-button nav-link" href="project.html">Projects</a-->
+            <div class="dropdown">
+                <button class="dropdown-btn">Contact <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a class="w3-button" href="#"><i class="fa fa-envelope"> Mail</i></a>
+                    <a class="w3-button" href="#"><i class="fa fa-github"> Github</i></a>
+                </div>
+            </div>
+            <a class="w3-bar-item w3-button nav-link active" href="photogallery.html">Photo Gallery</a>
+            <form class="search-container">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+    <main class="gallery-container">
+        <div class="slideshow">
+            <!--SLIDE 1-->
+            <div class="slide" id="slide1">
+                <img src="Assets/DSC00029.JPG" alt="lava">
+                <div class="caption">
+                    <h3>Lava</h3>
+                    <p>Mystic hills of Kalimpong</p>
+                </div>
+            </div>
+            <!--SLIDE 2-->
+            <div class="slide" id="slide2">
+                <img src="Assets/DSC00030.JPG" alt="monastry">
+                <div class="caption">
+                    <h3>ll</h3>
+                    <p>ll</p>
+                </div>
+            </div>
+            <!--SLIDE 3-->
+            <div class="slide" id="slide3">
+                <img src="Assets/DSC00031.JPG" alt="3rd pic">
+                <div class="caption">
+                    <h3>Kagyu Thekchen Ling Monastery</h3>
+                    <p>Winding narrow roads</p>
+                </div>
+            </div>
+            <!--SLIDE 4-->
+            <div class="slide" id="slide4">
+                <img src="Assets/DSC00365.JPG" alt="ktown">
+                <div class="caption">
+                    <h3>Heaven's Road, Kurseong</h3>
+                    <p>Saturday sunset</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <a href="#slide1" class="slider-dot"></a>
+            <a href="#slide2" class="slider-dot"></a>
+            <a href="#slide3" class="slider-dot"></a>
+            <a href="#slide4" class="slider-dot"></a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>My Photo Gallery <a href="index.html"><i class="fa fa-home"></i></i></a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
