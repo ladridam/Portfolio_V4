@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <meta name="author" content="Ridam Rabi Das">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/contactStyle.css">
+</head>
+<body>
+    <header>
+        <nav class="w3-bar nav-custom">
+            <a class="w3-bar-item w3-button nav-link" href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a class="w3-bar-item w3-button nav-link" href="project.html"><i class="fa fa-wrench"></i> Projects</a>
+            <a class="w3-bar-item w3-button nav-link active" href="contact.html"><i class="fa fa-address-book-o"></i> Contact</a>
+            <a class="w3-bar-item w3-button nav-link" href="photogallery.html"><i class="fa fa-photo"></i> About Me</a>
+            <form class="search-container">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+    
+    <div class="content-container">
+        <div class="contact-grid">
+            <!-- Contact Card 1 EMAIL -->
+            <div class="contact-card" onclick="window.location.href='mailto:ridam.d.0224@inspiria.edu.in'">
+                <div class="card-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>ridam.d.0224@inspiria.edu.in</p>
+                <div class="card-hover">Click to email me</div>
+            </div>
+            
+            <!-- Contact Card 2 PHONE -->
+            <div class="contact-card" onclick="copyPhone()">
+                <div class="card-icon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <h3>Phone</h3>
+                <p>+91 8158906976</p>
+                <div class="card-hover">Click to copy number</div>
+                <span id="copy-notification"></span>
+            </div>
+            
+            <!-- Contact Card 3 LOCATION-->
+            <div class="contact-card" onclick="window.open('https://maps.app.goo.gl/c11kPt9K1esBsScU9')">
+                <div class="card-icon">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <h3>Location</h3>
+                <p>Siliguri, West Bengal</p>
+                <div class="card-hover">View on Google Maps</div>
+            </div>
+            
+            <!-- Contact Card 4 GITHUB -->
+            <div class="contact-card" onclick="window.open('https://github.com/ladridam')">
+                <div class="card-icon">
+                    <i class="fa fa-github"></i>
+                </div>
+                <h3>GitHub</h3>
+                <p>@ladridam</p>
+                <div class="card-hover">Visit my profile</div>
+            </div>
+            
+            <!-- Contact Card 5 LINKEDIN -->
+            <div class="contact-card" onclick="window.open('https://linkedin.com/in/yourprofile')">
+                <div class="card-icon">
+                    <i class="fa fa-linkedin"></i>
+                </div>
+                <h3>LinkedIn</h3>
+                <p>Ridam Rabi Das</p>
+                <div class="card-hover">Connect with me</div>
+            </div>
+            
+            <!-- Contact Form Card -->
+            <div class="contact-card form-card">
+                <h3>Send a Message</h3>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send <i class="fa fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Ridam Rabi Das (BCA), IKC Siliguri, 2024 - Present <br></p>
+            <p>Contact: <a href="mailto:ridam.d.0224@inspiria.edu.in">ridam.d.0224@inspiria.edu.in</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // COPY PHONE NUMBER FUNCTION
+        function copyPhone() {
+            const phone = "+91 8158906976";
+            navigator.clipboard.writeText(phone);
+            
+            const notification = document.getElementById('copy-notification');
+            notification.textContent = "Copied!";
+            notification.style.display = "block";
+            
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 2000);
+        }
+        
+        // FORM SUBMIT MESSAGE
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+/* Base Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Assets/village-education.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: #006cff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.divider {
+    height: 3px;
+    width: 100px;
+    background: linear-gradient(to right, #00c6ff, #006cff);
+    margin: 15px auto;
+}
+
+/* Problem Section */
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.problem-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-10px);
+}
+
+.problem-icon {
+    font-size: 2.5rem;
+    color: #006cff;
+    margin-bottom: 20px;
+}
+
+.problem-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Solution Section */
+.solution-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.solution-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.solution-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.solution-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.solution-text h3 {
+    font-size: 1.8rem;
+    color: #006cff;
+    margin-bottom: 20px;
+}
+
+.solution-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.solution-text li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.solution-text li i {
+    color: #00c6ff;
+}
+
+.tech-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.tech-option i {
+    font-size: 2rem;
+    color: #006cff;
+}
+
+/* Progress Section */
+.progress-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 80px;
+    justify-content: center;
+}
+
+.progress-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.progress-icon {
+    font-size: 2rem;
+    color: #006cff;
+}
+
+.progress-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .solution-content {
+        flex-direction: column;
+    }
+    
+    .progress-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Keep your existing nav and footer styles */
+/*CUSTOMISING NAV*/
+.nav-custom {
+    background: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: visible;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #fff !important;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white !important;
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+/*SEARCH CONTAINER*/
+.search-container {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.search-container input {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+/*SEARCH CONTAINER BUTTON*/
+.search-container button {
+    padding: 8px 12px;
+    background: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #00c6ff;
+}
+
+/*FOOTER*/
+.footer {
+    background: rgba(0, 0, 0, 0.6);
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #00c6ff;
+}
+
+.footer-content a:hover {
+    color: #fff;
+    text-decoration: underline;
+    font-size: medium;
+    transition: color, font-size 0.3s;
+}

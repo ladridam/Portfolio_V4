@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Village Education Initiative | Ridam Rabi Das</title>
+    <meta name="author" content="Ridam Rabi Das">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/projectStyle.css">
+</head>
+
+<body>
+    <header>
+        <nav class="w3-bar nav-custom">
+            <a href="index.html" class="w3-bar-item w3-button nav-link"><i class="fa fa-home"></i> Home</a>
+            <a href="project.html" class="w3-bar-item w3-button nav-link active"><i class="fa fa-wrench"></i> Projects</a>
+            <a href="contact.html" class="w3-bar-item w3-button nav-link"><i class="fa fa-address-book"></i> Contact</a>
+            <a href="photogallery.html" class="w3-bar-item w3-button nav-link"><i class="fa fa-photo"></i> About Me</a>
+            <form action="" class="search-container">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+
+    <main class="project-container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Village Education Initiative</h1>
+                <p>Bridging the gap between education privilege and accessibility</p>
+            </div>
+        </section>
+
+        <section class="problem-section">
+            <div class="section-header">
+                <h2><i class="fa fa-exclamation-triangle"></i> The Challenge</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fa fa-language"></i>
+                    </div>
+                    <h3>Language Barrier</h3>
+                    <p>A survey revealed that out of 100 children aged 10-18 in the target village, the majority have little to no basic English communication skills, severely limiting their future opportunities.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educational Access</h3>
+                    <p>Quality education remains a challenge between right and privilege, with most underprivileged students lacking access to fundamental learning resources.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fa fa-plug"></i>
+                    </div>
+                    <h3>Technology Gap</h3>
+                    <p>The village lacks technological infrastructure, creating significant barriers to implementing modern educational solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="solution-section">
+            <div class="section-header">
+                <h2><i class="fa fa-lightbulb-o"></i> Our Innovative Approach</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="solution-content">
+                <div class="solution-image">
+                    <img src="Assets/project-education.jpg" alt="Education model diagram">
+                </div>
+                <div class="solution-text">
+                    <h3>Non-Traditional Learning Center</h3>
+                    <p>Rather than establishing a conventional school, we're creating a specialized educational institution focused on:</p>
+                    <ul>
+                        <li><i class="fa fa-check"></i> English language acquisition</li>
+                        <li><i class="fa fa-check"></i> Practical mathematics</li>
+                        <li><i class="fa fa-check"></i> Spoken communication skills</li>
+                    </ul>
+                    <p>Our program features 6 competency-based levels instead of traditional grade classes, allowing students to progress at their own pace.</p>
+                    
+                    <h3>Technology Integration</h3>
+                    <p>We're evaluating the most appropriate technological solutions for the village environment:</p>
+                    <div class="tech-options">
+                        <div class="tech-option">
+                            <i class="fa fa-music"></i>
+                            <span>MP3 Players</span>
+                        </div>
+                        <div class="tech-option">
+                            <i class="fa fa-tablet"></i>
+                            <span>Tablets</span>
+                        </div>
+                        <div class="tech-option">
+                            <i class="fa fa-laptop"></i>
+                            <span>Refurbished Laptops</span>
+                        </div>
+                    </div>
+                    <p>Each option is being carefully assessed for sustainability, cost-effectiveness, and educational impact.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="section-header">
+                <h2><i class="fa fa-tasks"></i> Current Progress</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="progress-content">
+                <div class="progress-item">
+                    <div class="progress-icon">
+                        <i class="fa fa-cloud"></i>
+                    </div>
+                    <div class="progress-text">
+                        <h3>Learning Management System</h3>
+                        <p>Currently evaluating Salesforce CRM and Dash LMS platforms to manage student progress and curriculum delivery.</p>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="progress-text">
+                        <h3>Community Engagement</h3>
+                        <p>Building relationships with village leaders and families to ensure cultural appropriateness and community buy-in.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Ridam Rabi Das (BCA), IKC Siliguri, 2024 - Present <br></p>
+            <p>Contact: <a href="mailto:ridam.d.0224@inspiria.edu.in">ridam.d.0224@inspiria.edu.in</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for tech options
+        document.querySelectorAll('.tech-option').forEach(option => {
+            option.addEventListener('mouseover', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+            });
+            option.addEventListener('mouseout', function() {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            });
+        });
+    </script>
+</body>
+</html>
