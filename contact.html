@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Contact</title>
     <meta name="author" content="Ridam Rabi Das">
@@ -8,12 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/contactStyle.css">
 </head>
+
 <body>
     <header>
         <nav class="w3-bar nav-custom">
             <a class="w3-bar-item w3-button nav-link" href="index.html"><i class="fa fa-home"></i> Home</a>
             <a class="w3-bar-item w3-button nav-link" href="project.html"><i class="fa fa-wrench"></i> Projects</a>
-            <a class="w3-bar-item w3-button nav-link active" href="contact.html"><i class="fa fa-address-book-o"></i> Contact</a>
+            <a class="w3-bar-item w3-button nav-link active" href="contact.html"><i class="fa fa-address-book-o"></i>
+                Contact</a>
             <a class="w3-bar-item w3-button nav-link" href="photogallery.html"><i class="fa fa-photo"></i> About Me</a>
             <form class="search-container">
                 <input type="text" placeholder="Search..." name="search">
@@ -21,7 +24,7 @@
             </form>
         </nav>
     </header>
-    
+
     <div class="content-container">
         <div class="contact-grid">
             <!-- Contact Card 1 EMAIL -->
@@ -33,7 +36,7 @@
                 <p>ridam.d.0224@inspiria.edu.in</p>
                 <div class="card-hover">Click to email me</div>
             </div>
-            
+
             <!-- Contact Card 2 PHONE -->
             <div class="contact-card" onclick="copyPhone()">
                 <div class="card-icon">
@@ -44,7 +47,7 @@
                 <div class="card-hover">Click to copy number</div>
                 <span id="copy-notification"></span>
             </div>
-            
+
             <!-- Contact Card 3 LOCATION-->
             <div class="contact-card" onclick="window.open('https://maps.app.goo.gl/c11kPt9K1esBsScU9')">
                 <div class="card-icon">
@@ -54,7 +57,7 @@
                 <p>Siliguri, West Bengal</p>
                 <div class="card-hover">View on Google Maps</div>
             </div>
-            
+
             <!-- Contact Card 4 GITHUB -->
             <div class="contact-card" onclick="window.open('https://github.com/ladridam')">
                 <div class="card-icon">
@@ -64,9 +67,9 @@
                 <p>@ladridam</p>
                 <div class="card-hover">Visit my profile</div>
             </div>
-            
+
             <!-- Contact Card 5 LINKEDIN -->
-            <div class="contact-card" onclick="window.open('https://linkedin.com/in/yourprofile')">
+            <div class="contact-card" onclick="window.open('https://www.linkedin.com/in/ridam-rabi-das-a21315317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app')">
                 <div class="card-icon">
                     <i class="fa fa-linkedin"></i>
                 </div>
@@ -74,7 +77,7 @@
                 <p>Ridam Rabi Das</p>
                 <div class="card-hover">Connect with me</div>
             </div>
-            
+
             <!-- Contact Form Card -->
             <div class="contact-card form-card">
                 <h3>Send a Message</h3>
@@ -87,7 +90,7 @@
             </div>
         </div>
     </div>
-    
+
     <footer class="footer">
         <div class="footer-content">
             <p>Ridam Rabi Das (BCA), IKC Siliguri, 2024 - Present <br></p>
@@ -100,22 +103,23 @@
         function copyPhone() {
             const phone = "+91 8158906976";
             navigator.clipboard.writeText(phone);
-            
+
             const notification = document.getElementById('copy-notification');
             notification.textContent = "Copied!";
             notification.style.display = "block";
-            
+
             setTimeout(() => {
                 notification.style.display = "none";
             }, 2000);
         }
-        
+
         // FORM SUBMIT MESSAGE
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Message sent successfully!');
             this.reset();
         });
     </script>
 </body>
+
 </html>
